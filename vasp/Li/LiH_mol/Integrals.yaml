@@ -1,0 +1,258 @@
+components:
+  hhhh:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 2
+      2:
+        length: 2
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hhhp:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 2
+      2:
+        length: 2
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hhph:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 2
+      2:
+        length: 6
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hhpp:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 2
+      2:
+        length: 6
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hphh:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 6
+      2:
+        length: 2
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hphp:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 6
+      2:
+        length: 2
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hpph:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 6
+      2:
+        length: 6
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  hppp:
+    dimensions:
+      0:
+        length: 2
+      1:
+        length: 6
+      2:
+        length: 6
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  phhh:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 2
+      2:
+        length: 2
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  phhp:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 2
+      2:
+        length: 2
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  phph:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 2
+      2:
+        length: 6
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  phpp:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 2
+      2:
+        length: 6
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  pphh:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 6
+      2:
+        length: 2
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  pphp:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 6
+      2:
+        length: 2
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  ppph:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 6
+      2:
+        length: 6
+      3:
+        length: 2
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+  pppp:
+    dimensions:
+      0:
+        length: 6
+      1:
+        length: 6
+      2:
+        length: 6
+      3:
+        length: 6
+    elements:
+      type: TextFile
+    scalarType: Real64
+    type: Tensor
+    unit: 0.036749322175638754
+    version: 100
+type: TensorSet

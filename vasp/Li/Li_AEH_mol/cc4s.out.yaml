@@ -1,0 +1,155 @@
+executionEnvironment:
+  buildDate: Apr 11 2024 21:51:00
+  compiler: icc (ICC) 19.1.0.166 20191121
+  dryRanks: 0
+  hosts:
+    0:
+      host: n4911-066
+      ranks:
+        0: 0
+  startTime: "Thu May 22 13:26:03 2025\n"
+  totalProcesses: 1
+  version: heads/handsOn-ct-0-gbea69f54
+statistics:
+  floatingPointOperations: 238943609404
+  flops: 2780137127.8212247
+  realtime: 85.946699180
+steps:
+  0:
+    in:
+      fileName: EigenEnergies.yaml
+    name: Read
+    out:
+      destination: 0x1c03330
+  1:
+    in:
+      fileName: CoulombVertex.yaml
+    name: Read
+    out:
+      destination: 0x1a9f1d0
+  2:
+    in:
+      eigenEnergies: 0x1c03330
+    name: DefineHolesAndParticles
+    out:
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x1c18a90
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  3:
+    in:
+      operator: 0x1a9f1d0
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x1c18a90
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: SliceOperator
+    out:
+      slicedOperator:
+        field: Complex<>
+        pointer: 0x1bdb9d0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  4:
+    in:
+      slicedCoulombVertex:
+        field: Complex<>
+        pointer: 0x1bdb9d0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: VertexCoulombIntegrals
+    out:
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x1bf9d10
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+  5:
+    in:
+      amplitudesConvergence: 9.9999999999999995e-07
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x1bf9d10
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      energyConvergence: 0.0001
+      integralsSliceSize: 100
+      levelShift: 0
+      linearized: 0
+      maxIterations: 200
+      method: Ccsd
+      mixer:
+        maxResidua: 12
+        type: DiisMixer
+      slicedCoulombVertex:
+        field: Complex<>
+        pointer: 0x1bdb9d0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x1c18a90
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: CoupledCluster
+    out:
+      amplitudes:
+        field: Real<>
+        pointer: 0x20487f0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      convergenceReached: 1
+      energy:
+        correlation: -0.99209678723521744
+        direct: -1.9841935744704349
+        exchange: 0.99209678723521744
+        secondOrder: -0.77587139879167766
+        unit: 0.036749322175638754
+  6:
+    in:
+      fileName: DeltaIntegralsHH.yaml
+    name: Read
+    out:
+      destination: 0x1bd1510
+  7:
+    in:
+      fileName: DeltaIntegralsPPHH.yaml
+    name: Read
+    out:
+      destination: 0x1cf7ec0
+  8:
+    in:
+      fileName: Mp2PairEnergies.yaml
+    name: Read
+    out:
+      destination: 0x1c1b480
+  9:
+    in:
+      amplitudes:
+        field: Real<>
+        pointer: 0x20487f0
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      coulombIntegrals:
+        field: Real<>
+        pointer: 0x1bf9d10
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+      deltaIntegralsHH: 0x1bd1510
+      deltaIntegralsPPHH: 0x1cf7ec0
+      mp2PairEnergies: 0x1c1b480
+      slicedEigenEnergies:
+        field: Real<>
+        pointer: 0x1c18a90
+        tensor-engine: DefaultTensorEngine
+        type: TensorSet
+    name: BasisSetCorrection
+    out:
+      energy:
+        correction: -0.0075457876047272388
+        pplCorrection: 0.011385800061783125
+        secondOrderCorrection: -0.018931587666510374
+        uncorrectedCorrelation: -0.99209678723522954
+        unit: 0.036749322175638782

@@ -1,0 +1,410 @@
+executionEnvironment:
+  buildDate: Feb 28 2024 22:27:23
+  compiler: g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+  dryRanks: 0
+  hosts:
+    0:
+      host: cqc01
+      ranks:
+        0: 0
+  startTime: "Wed Mar  6 14:03:31 2024\n"
+  totalProcesses: 1
+  version: heads/develop-0-g8eec79ce
+statistics:
+  floatingPointOperations: 164174310
+  flops: 156599571.64993915
+  realtime: 1.048370109
+steps:
+  0:
+    in:
+      fileName: EigenEnergies.yaml
+    name: Read
+    out:
+      destination: 0x55beaca96350
+    statistics:
+      floatingPointOperations: 0
+      flops: 0
+      realtime: 0.005970878
+  1:
+    in:
+      fileName: CoulombVertex.yaml
+    name: Read
+    out:
+      destination: 0x55beaca95280
+    statistics:
+      floatingPointOperations: 0
+      flops: 0
+      realtime: 0.012856553
+  2:
+    in:
+      eigenEnergies: 0x55beaca96350
+    name: DefineHolesAndParticles
+    out:
+      slicedEigenEnergies: 0x55beaca906e0
+    statistics:
+      floatingPointOperations: 0
+      flops: 0
+      realtime: 0.000188145
+  3:
+    in:
+      operator: 0x55beaca95280
+      slicedEigenEnergies: 0x55beaca906e0
+    name: SliceOperator
+    out:
+      slicedOperator: 0x55beaca87320
+    statistics:
+      floatingPointOperations: 0
+      flops: 0
+      realtime: 0.000686399
+  4:
+    in:
+      slicedCoulombVertex: 0x55beaca87320
+    name: VertexCoulombIntegrals
+    out:
+      coulombIntegrals: 0x55beacac91a0
+    statistics:
+      floatingPointOperations: 135680
+      flops: 86949556.056125
+      realtime: 0.001560445
+  5:
+    in:
+      amplitudesConvergence: 9.9999999999999995e-07
+      coulombIntegrals: 0x55beacac91a0
+      energyConvergence: 0.0001
+      integralsSliceSize: 100
+      levelShift: 0
+      linearized: 0
+      maxIterations: 200
+      method: Ccsd
+      mixer:
+        maxResidua: 12
+        type: DiisMixer
+      ppl: 1
+      slicedCoulombVertex: 0x55beaca87320
+      slicedEigenEnergies: 0x55beaca906e0
+    name: CoupledCluster
+    out:
+      amplitudes: 0x55beacadea80
+      convergenceReached: 0
+      energy:
+        correlation: 0
+        direct: 0
+        exchange: 0
+        secondOrder: 0
+        unit: 0.036749322175638754
+    statistics:
+      floatingPointOperations: 163222150
+      flops: 167123541.61865011
+      realtime: 0.976655643
+  6:
+    in:
+      binary: 1
+      fileName: Amplitudes.yaml
+      source: 0x55beacadea80
+    name: Write
+    out:
+      persitentSource:
+        components:
+          ph:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 2
+            elements:
+              type: IeeeBinaryFile
+            scalarType: Real64
+            type: Tensor
+            unit: 1
+            version: 100
+          pphh:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 6
+              2:
+                length: 2
+              3:
+                length: 2
+            elements:
+              type: IeeeBinaryFile
+            scalarType: Real64
+            type: Tensor
+            unit: 1
+            version: 100
+        type: TensorSet
+    statistics:
+      floatingPointOperations: 0
+      flops: 0
+      realtime: 0.005849639
+  7:
+    in:
+      binary: 0
+      fileName: Integrals.yaml
+      source: 0x55beacac91a0
+    name: Write
+    out:
+      persitentSource:
+        components:
+          hhhh:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 2
+              2:
+                length: 2
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hhhp:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 2
+              2:
+                length: 2
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hhph:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 2
+              2:
+                length: 6
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hhpp:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 2
+              2:
+                length: 6
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hphh:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 6
+              2:
+                length: 2
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hphp:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 6
+              2:
+                length: 2
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hpph:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 6
+              2:
+                length: 6
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          hppp:
+            dimensions:
+              0:
+                length: 2
+              1:
+                length: 6
+              2:
+                length: 6
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          phhh:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 2
+              2:
+                length: 2
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          phhp:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 2
+              2:
+                length: 2
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          phph:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 2
+              2:
+                length: 6
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          phpp:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 2
+              2:
+                length: 6
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          pphh:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 6
+              2:
+                length: 2
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          pphp:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 6
+              2:
+                length: 2
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          ppph:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 6
+              2:
+                length: 6
+              3:
+                length: 2
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+          pppp:
+            dimensions:
+              0:
+                length: 6
+              1:
+                length: 6
+              2:
+                length: 6
+              3:
+                length: 6
+            elements:
+              type: TextFile
+            scalarType: Real64
+            type: Tensor
+            unit: 0.036749322175638754
+            version: 100
+        type: TensorSet
+    statistics:
+      floatingPointOperations: 816480
+      flops: 64314193.04466515
+      realtime: 0.012695176

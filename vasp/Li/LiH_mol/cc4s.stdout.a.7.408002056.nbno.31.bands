@@ -1,0 +1,83 @@
+
+                __ __      
+     __________/ // / _____
+    / ___/ ___/ // /_/ ___/
+   / /__/ /__/__  __(__  ) 
+   \___/\___/  /_/ /____/  
+  Coupled Cluster for Solids
+
+version: heads/handsOn-ct-0-gbea69f54, date: Fri Apr 5 14:48:29 2024 +0200
+build date: Apr 11 2024 21:51:00
+compiler: icc (ICC) 19.1.0.166 20191121
+mpi: Intel(R) MPI Library for Linux* OS, Version 2019 Update 6 Build 20191024 (id: 082ae5608)
+total processes: 1
+calculation started on: Thu May 22 11:52:18 2025
+
+Dry run finished. Estimates provided for 1 ranks.
+Memory estimate (per Rank/Total): 0.0287357 / 0.0287357 GB
+Operations estimate (per Rank/Total): 177.423 / 177.423 GFLOPS
+Time estimate with assumed performance of 10 GFLOPS/core/s: 17.7423 s (0.00492841 h)
+--
+step: 1, Read
+Reading from text file EigenEnergies.elements
+realtime 0.001626071 s
+--
+step: 2, Read
+Reading from binary file CoulombVertex.elements
+realtime 0.169283921 s
+--
+step: 3, DefineHolesAndParticles
+number of holes     No: 1
+number of particles Nv: 30
+number of states    Np: 31
+realtime 0.000125928 s
+--
+step: 4, SliceOperator
+Slicing CoulombVertex.elements into holes and particles.
+realtime 0.571196232 s
+--
+step: 5, VertexCoulombIntegrals
+Using real Coulomb integrals
+number of field variables NF: 267
+realtime 0.056325407 s
+--
+step: 6, CoupledCluster
+Using method Ccsd. integralsSliceSize: 100
+Using mixer DiisMixer. maxResidua: 12
+Maximum number of iterations: 200
+Unless reaching energy convergence dE: 0.0001
+and amplitudes convergence dR: 1e-06
+Iter         Energy         dE           dR         time   GF/s/core
+   1  -7.52840253e-01  -7.5284e-01   1.2352e-01      0.0    0.2
+   2  -9.39369803e-01  -1.8653e-01   2.4344e-02      1.2    0.7
+   3  -9.77864276e-01  -3.8494e-02   6.5053e-03      1.1    0.8
+   4  -9.82708891e-01  -4.8446e-03   2.2797e-03      1.1    0.8
+   5  -9.82329700e-01   3.7919e-04   3.9735e-04      1.1    0.8
+   6  -9.82337349e-01  -7.6485e-06   6.0977e-05      1.1    0.8
+   7  -9.82356149e-01  -1.8801e-05   1.3941e-05      1.1    0.8
+   8  -9.82354164e-01   1.9856e-06   3.1706e-06      1.1    0.8
+   9  -9.82353854e-01   3.0985e-07   6.3769e-07      1.1    0.8
+
+Ccsd correlation energy:          -0.9823538538
+2nd-order correlation energy:     -0.7528402532
+realtime 8.950255917 s
+--
+step: 7, Read
+Reading from binary file DeltaIntegralsHH.elements
+realtime 0.000806766 s
+--
+step: 8, Read
+Reading from binary file DeltaIntegralsPPHH.elements
+realtime 0.001035009 s
+--
+step: 9, Read
+Reading from text file Mp2PairEnergies.elements
+realtime 0.000282938 s
+--
+step: 10, BasisSetCorrection
+Ccsd-Bsie energy correction:      -0.01450117088
+realtime 0.018389374 s
+--
+Calculation finished successfully.
+Calculation finished at: Thu May 22 11:52:31 2025
+

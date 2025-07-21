@@ -1,0 +1,78 @@
+- name: Read
+  in:
+    fileName: "EigenEnergies.yaml"
+  out:
+    destination: EigenEnergies
+
+- name: Read
+  in:
+    fileName: "CoulombVertex.yaml"
+  out:
+    destination: CoulombVertex
+
+- name: DefineHolesAndParticles
+  in:
+    eigenEnergies: EigenEnergies
+  out:
+    slicedEigenEnergies: EigenEnergies
+
+
+- name: SliceOperator
+  in:
+    slicedEigenEnergies: EigenEnergies
+    operator: CoulombVertex
+  out:
+    slicedOperator: CoulombVertex
+
+- name: VertexCoulombIntegrals
+  in:
+    slicedCoulombVertex: CoulombVertex
+  out:
+    coulombIntegrals: CoulombIntegrals
+
+- name: CoupledCluster
+  in:
+    method: Ccsd
+    integralsSliceSize: 100
+    slicedEigenEnergies: EigenEnergies
+    coulombIntegrals: CoulombIntegrals
+    slicedCoulombVertex: CoulombVertex
+    maxIterations: 200
+    energyConvergence: 1.0E-4
+    mixer:
+      type: DiisMixer
+      maxResidua: 12
+  out:
+    energy: CcsdEnergy
+    amplitudes: Amplitudes
+
+
+- name: Read
+  in:
+    fileName: "DeltaIntegralsHH.yaml"
+  out:
+    destination: Nij
+
+- name: Read
+  in:
+    fileName: "DeltaIntegralsPPHH.yaml"
+  out:
+    destination: DeltaIntegrals
+
+- name: Read
+  in:
+    fileName: "Mp2PairEnergies.yaml"
+  out:
+    destination: Mp2PairEnergies
+
+- name: BasisSetCorrection
+  in:
+    slicedEigenEnergies: EigenEnergies
+    amplitudes: Amplitudes
+    coulombIntegrals: CoulombIntegrals
+    mp2PairEnergies: Mp2PairEnergies
+    deltaIntegralsHH: Nij
+    deltaIntegralsPPHH: DeltaIntegrals
+  out:
+    {}
+

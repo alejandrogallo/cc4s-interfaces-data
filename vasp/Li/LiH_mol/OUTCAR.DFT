@@ -1,0 +1,1734 @@
+ vasp.6.3.0 20Jan22 (build Dec  8 2022 17:40:58) gamma-only                      
+ executed on             LinuxGNU date 2024.03.06  14:01:19
+ running on    1 total cores
+ distrk:  each k-point on    1 cores,    1 groups
+ distr:  one band on NCORE=   1 cores,    1 groups
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ INCAR:
+   ENCUT = 500
+   SIGMA = 0.0001
+   PREC = A
+   NBANDS = 16
+
+ POTCAR:    PAW_PBE Li_AE_GW 25Mar2010            
+ POTCAR:    PAW_PBE H_GW 21Apr2008                
+ POTCAR:    PAW_PBE Li_AE_GW 25Mar2010            
+   SHA256 =  ae13e6342699fe0ac99e545771c218bb29ee312c520ed4d7aae94e33ddcb6cd4 Li_AE_GW/POTCAR       
+   COPYR  = (c) Copyright 25Mar2010 Georg Kresse                                                    
+   COPYR  = This file is part of the software VASP. Any use, copying, and all other rights are regul
+   COPYR  = If you do not have a valid VASP license, you may not use, copy or distribute this file. 
+   VRHFIN =Li: 1s2s                                                                                 
+   LEXCH  = PE                                                                                      
+   EATOM  =   200.9989 eV,   14.7730 Ry                                                             
+                                                                                                    
+   TITEL  = PAW_PBE Li_AE_GW 25Mar2010                                                              
+   LULTRA =        F    use ultrasoft PP ?                                                          
+   IUNSCR =        0    unscreen: 0-lin 1-nonlin 2-no                                               
+   RPACOR =    0.000    partial core radius                                                         
+   POMASS =    7.010; ZVAL   =    3.000    mass and valenz                                          
+   RCORE  =    1.500    outmost cutoff radius                                                       
+   RWIGS  =    1.600; RWIGS  =    0.847    wigner-seitz radius (au A)                               
+   ENMAX  =  433.699; ENMIN  =  325.274 eV                                                          
+   RCLOC  =    1.003    cutoff for local pot                                                        
+   LCOR   =        T    correct aug charges                                                         
+   LPAW   =        T    paw PP                                                                      
+   EAUG   = 1534.740                                                                                
+   RMAX   =    1.536    core radius for proj-oper                                                   
+   RAUG   =    1.300    factor for augmentation sphere                                              
+   RDEP   =    1.520    radius for radial grids                                                     
+   RDEPT  =    1.300    core radius for aug-charge                                                  
+                                                                                                    
+   Atomic configuration                                                                             
+    5 entries                                                                                       
+     n  l   j            E        occ.                                                              
+     1  0  0.50       -53.3604   2.0000                                                             
+     1  0  0.50       -52.0001   0.0000                                                             
+     2  1  0.50        -1.5636   1.0000                                                             
+     3  2  1.50        -1.3606   0.0000                                                             
+     4  3  2.50        -1.3606   0.0000                                                             
+   Description                                                                                      
+     l       E           TYP  RCUT    TYP  RCUT                                                     
+     0    -53.3603633     23  1.200                                                                 
+     0    -52.0001064     23  1.200                                                                 
+     0    176.8757380     23  1.300                                                                 
+     1     -1.5635925     23  1.500                                                                 
+     1    122.4524340     23  1.500                                                                 
+     1    299.3281720     23  1.500                                                                 
+     2     54.4233040     23  1.500                                                                 
+     2    204.0873900     23  1.500                                                                 
+     3    122.4524340     23  1.500                                                                 
+  local pseudopotential read in
+  kinetic energy density of atom read in
+  atomic valenz-charges read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+  non local Contribution for L=           3  read in
+    real space projection operators read in
+    PAW grid and wavefunctions read in
+
+   number of l-projection  operators is LMAX  =           9
+   number of lm-projection operators is LMMAX =          29
+
+ POTCAR:    PAW_PBE H_GW 21Apr2008                
+   SHA256 =  cecc88617a3d1ece9865646f5d462fc0f44fd1f68d6f2eb08f18a2e421902afb H_GW/POTCAR           
+   COPYR  = (c) Copyright 21Apr2008 Georg Kresse                                                    
+   COPYR  = This file is part of the software VASP. Any use, copying, and all other rights are regul
+   COPYR  = If you do not have a valid VASP license, you may not use, copy or distribute this file. 
+   VRHFIN =H: ultrasoft test                                                                        
+   LEXCH  = PE                                                                                      
+   EATOM  =    12.4884 eV,    0.9179 Ry                                                             
+                                                                                                    
+   TITEL  = PAW_PBE H_GW 21Apr2008                                                                  
+   LULTRA =        F    use ultrasoft PP ?                                                          
+   IUNSCR =        0    unscreen: 0-lin 1-nonlin 2-no                                               
+   RPACOR =    0.000    partial core radius                                                         
+   POMASS =    1.000; ZVAL   =    1.000    mass and valenz                                          
+   RCORE  =    1.100    outmost cutoff radius                                                       
+   RWIGS  =    1.100; RWIGS  =    0.582    wigner-seitz radius (au A)                               
+   ENMAX  =  300.000; ENMIN  =  250.000 eV                                                          
+   RCLOC  =    0.701    cutoff for local pot                                                        
+   LCOR   =        T    correct aug charges                                                         
+   LPAW   =        T    paw PP                                                                      
+   EAUG   =  500.000                                                                                
+   RMAX   =    1.123    core radius for proj-oper                                                   
+   RAUG   =    1.200    factor for augmentation sphere                                              
+   RDEP   =    1.112    radius for radial grids                                                     
+   RDEPT  =    1.100    core radius for aug-charge                                                  
+                                                                                                    
+   Atomic configuration                                                                             
+    3 entries                                                                                       
+     n  l   j            E        occ.                                                              
+     1  0  0.50        -6.4927   1.0000                                                             
+     2  1  0.50        -3.4015   0.0000                                                             
+     3  2  1.50        13.6058   0.0000                                                             
+   Description                                                                                      
+     l       E           TYP  RCUT    TYP  RCUT                                                     
+     0     -6.4927495     23  0.950                                                                 
+     0      6.8029130     23  0.950                                                                 
+     1     -4.0817478     23  1.100                                                                 
+     1    108.8466080     23  1.100                                                                 
+     2     81.6349560     23  1.100                                                                 
+  local pseudopotential read in
+  kinetic energy density of atom read in
+  atomic valenz-charges read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+    PAW grid and wavefunctions read in
+
+   number of l-projection  operators is LMAX  =           5
+   number of lm-projection operators is LMMAX =          13
+
+  PAW_PBE Li_AE_GW 25Mar2010            :
+ energy of atom  1       EATOM= -200.9989
+ kinetic energy error for atom=    0.0174 (will be added to EATOM!!)
+  PAW_PBE H_GW 21Apr2008                :
+ energy of atom  2       EATOM=  -12.4884
+ kinetic energy error for atom=    0.0109 (will be added to EATOM!!)
+
+
+ POSCAR: LiH
+  positions in cartesian coordinates
+  No initial velocities read in
+ exchange correlation table for  LEXCH =        8
+   RHO(1)=    0.500       N(1)  =     2000
+   RHO(2)=  100.500       N(2)  =     4000
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ ion  position               nearest neighbor table
+   1  0.000  0.000  0.000-   2 1.60
+   2  0.000  0.000  0.320-   1 1.60
+
+  LATTYP: Found a simple cubic cell.
+ ALAT       =     5.0000000000
+  
+  Lattice vectors:
+  
+ A1 = (   5.0000000000,   0.0000000000,   0.0000000000)
+ A2 = (   0.0000000000,   5.0000000000,   0.0000000000)
+ A3 = (   0.0000000000,   0.0000000000,   5.0000000000)
+
+
+Analysis of symmetry for initial positions (statically):
+=====================================================================
+ Subroutine PRICEL returns:
+ Original cell was already a primitive cell.
+ 
+
+ Routine SETGRP: Setting up the symmetry group for a 
+ simple cubic supercell.
+
+
+ Subroutine GETGRP returns: Found  8 space group operations
+ (whereof  8 operations were pure point group operations)
+ out of a pool of 48 trial point group operations.
+
+
+The static configuration has the point symmetry C_4v.
+
+
+Analysis of symmetry for dynamics (positions and initial velocities):
+=====================================================================
+ Subroutine PRICEL returns:
+ Original cell was already a primitive cell.
+ 
+
+ Routine SETGRP: Setting up the symmetry group for a 
+ simple cubic supercell.
+
+
+ Subroutine GETGRP returns: Found  8 space group operations
+ (whereof  8 operations were pure point group operations)
+ out of a pool of 48 trial point group operations.
+
+
+The dynamic configuration has the point symmetry C_4v.
+
+
+ Subroutine INISYM returns: Found  8 space group operations
+ (whereof  8 operations are pure point group operations),
+ and found     1 'primitive' translations
+
+
+----------------------------------------------------------------------------------------
+
+                                     Primitive cell                                     
+
+  volume of cell :     125.0000
+
+  direct lattice vectors                    reciprocal lattice vectors
+     5.000000000  0.000000000  0.000000000     0.200000000  0.000000000  0.000000000
+     0.000000000  5.000000000  0.000000000     0.000000000  0.200000000  0.000000000
+     0.000000000  0.000000000  5.000000000     0.000000000  0.000000000  0.200000000
+
+  length of vectors
+     5.000000000  5.000000000  5.000000000     0.200000000  0.200000000  0.200000000
+
+  position of ions in fractional coordinates (direct lattice)
+     0.000000000  0.000000000  0.000000000
+     0.000000000  0.000000000  0.320000000
+
+  ion indices of the primitive-cell ions
+   primitive index   ion index
+                 1           1
+                 2           2
+
+----------------------------------------------------------------------------------------
+
+
+
+ KPOINTS: Automatically generated mesh            
+
+Automatic generation of k-mesh.
+ Grid dimensions read from file:
+ generate k-points for:    1    1    1
+
+ Generating k-lattice:
+
+  Cartesian coordinates                     Fractional coordinates (reciprocal lattice)
+     0.200000000  0.000000000  0.000000000     1.000000000  0.000000000  0.000000000
+     0.000000000  0.200000000  0.000000000     0.000000000  1.000000000  0.000000000
+     0.000000000  0.000000000  0.200000000     0.000000000  0.000000000  1.000000000
+
+  Length of vectors
+     0.200000000  0.200000000  0.200000000
+
+  Shift w.r.t. Gamma in fractional coordinates (k-lattice)
+     0.000000000  0.000000000  0.000000000
+
+ 
+ Subroutine IBZKPT returns following result:
+ ===========================================
+ 
+ Found      1 irreducible k-points:
+ 
+ Following reciprocal coordinates:
+            Coordinates               Weight
+  0.000000  0.000000  0.000000      1.000000
+ 
+ Following cartesian coordinates:
+            Coordinates               Weight
+  0.000000  0.000000  0.000000      1.000000
+ 
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+ Dimension of arrays:
+   k-points           NKPTS =      1   k-points in BZ     NKDIM =      1   number of bands    NBANDS=     16
+   number of dos      NEDOS =    301   number of ions     NIONS =      2
+   non local maximal  LDIM  =      9   non local SUM 2l+1 LMDIM =     29
+   total plane-waves  NPLWV =  46656
+   max r-space proj   IRMAX =      1   max aug-charges    IRDMAX=   4772
+   dimension x,y,z NGX =    36 NGY =   36 NGZ =   36
+   dimension x,y,z NGXF=    72 NGYF=   72 NGZF=   72
+   support grid    NGXF=    72 NGYF=   72 NGZF=   72
+   ions per type =               1   1
+   NGX,Y,Z   is equivalent  to a cutoff of  11.97, 11.97, 11.97 a.u.
+   NGXF,Y,Z  is equivalent  to a cutoff of  23.94, 23.94, 23.94 a.u.
+
+ SYSTEM =  unknown system                          
+ POSCAR =  LiH                                     
+
+ Startparameter for this run:
+   NWRITE =      2    write-flag & timer
+   PREC   = a         normal or accurate (medium, high low for compatibility)
+   ISTART =      1    job   : 0-new  1-cont  2-samecut
+   ICHARG =      0    charge: 1-file 2-atom 10-const
+   ISPIN  =      1    spin polarized calculation?
+   LNONCOLLINEAR =      F non collinear calculations
+   LSORBIT =      F    spin-orbit coupling
+   INIWAV =      1    electr: 0-lowe 1-rand  2-diag
+   LASPH  =      F    aspherical Exc in radial PAW
+ Electronic Relaxation 1
+   ENCUT  =  500.0 eV  36.75 Ry    6.06 a.u.   9.12  9.12  9.12*2*pi/ulx,y,z
+   ENINI  =  500.0     initial cutoff
+   ENAUG  = 1534.7 eV  augmentation charge cutoff
+   NELM   =     60;   NELMIN=  2; NELMDL=  0     # of ELM steps 
+   EDIFF  = 0.1E-03   stopping-criterion for ELM
+   LREAL  =      F    real-space projection
+   NLSPLINE    = F    spline interpolate recip. space projectors
+   LCOMPAT=      F    compatible to vasp.4.4
+   GGA_COMPAT  = T    GGA compatible to vasp.4.4-vasp.4.6
+   LMAXPAW     = -100 max onsite density
+   LMAXMIX     =    2 max onsite mixed and CHGCAR
+   VOSKOWN=      0    Vosko Wilk Nusair interpolation
+   ROPT   =    0.00000   0.00000
+ Ionic relaxation
+   EDIFFG = 0.1E-02   stopping-criterion for IOM
+   NSW    =      0    number of steps for IOM
+   NBLOCK =      1;   KBLOCK =      1    inner block; outer block 
+   IBRION =     -1    ionic relax: 0-MD 1-quasi-New 2-CG
+   NFREE  =      0    steps in history (QN), initial steepest desc. (CG)
+   ISIF   =      2    stress and relaxation
+   IWAVPR =     10    prediction:  0-non 1-charg 2-wave 3-comb
+   ISYM   =      2    0-nonsym 1-usesym 2-fastsym
+   LCORR  =      T    Harris-Foulkes like correction to forces
+
+   POTIM  = 0.5000    time-step for ionic-motion
+   TEIN   =    0.0    initial temperature
+   TEBEG  =    0.0;   TEEND  =   0.0 temperature during run
+   SMASS  =  -3.00    Nose mass-parameter (am)
+   estimated Nose-frequenzy (Omega)   =  0.10E-29 period in steps = 0.13E+47 mass=  -0.571E-27a.u.
+   SCALEE = 1.0000    scale energy and forces
+   NPACO  =    256;   APACO  = 10.0  distance and # of slots for P.C.
+   PSTRESS=    0.0 pullay stress
+
+  Mass of Ions in am
+   POMASS =   7.01  1.00
+  Ionic Valenz
+   ZVAL   =   3.00  1.00
+  Atomic Wigner-Seitz radii
+   RWIGS  =  -1.00 -1.00
+  virtual crystal weights 
+   VCA    =   1.00  1.00
+   NELECT =       4.0000    total number of electrons
+   NUPDOWN=      -1.0000    fix difference up-down
+
+ DOS related values:
+   EMIN   =  10.00;   EMAX   =-10.00  energy-range for DOS
+   EFERMI =   0.00
+   ISMEAR =     1;   SIGMA  =   0.00  broadening in eV -4-tet -1-fermi 0-gaus
+
+ Electronic relaxation 2 (details)
+   IALGO  =     38    algorithm
+   LDIAG  =      T    sub-space diagonalisation (order eigenvalues)
+   LSUBROT=      F    optimize rotation matrix (better conditioning)
+   TURBO    =      0    0=normal 1=particle mesh
+   IRESTART =      0    0=no restart 2=restart with 2 vectors
+   NREBOOT  =      0    no. of reboots
+   NMIN     =      0    reboot dimension
+   EREF     =   0.00    reference energy to select bands
+   IMIX   =      4    mixing-type and parameters
+     AMIX     =   0.40;   BMIX     =  1.00
+     AMIX_MAG =   1.60;   BMIX_MAG =  1.00
+     AMIN     =   0.10
+     WC   =   100.;   INIMIX=   1;  MIXPRE=   1;  MAXMIX= -45
+
+ Intra band minimization:
+   WEIMIN = 0.0000     energy-eigenvalue tresh-hold
+   EBREAK =  0.16E-05  absolut break condition
+   DEPER  =   0.30     relativ break condition  
+
+   TIME   =   0.40     timestep for ELM
+
+  volume/ion in A,a.u.               =      62.50       421.77
+  Fermi-wavevector in a.u.,A,eV,Ry     =   0.519746  0.982178  3.675428  0.270136
+  Thomas-Fermi vector in A             =   1.537268
+
+ Write flags
+   LWAVE        =      T    write WAVECAR
+   LDOWNSAMPLE  =      F    k-point downsampling of WAVECAR
+   LCHARG       =      T    write CHGCAR
+   LVTOT        =      F    write LOCPOT, total local potential
+   LVHAR        =      F    write LOCPOT, Hartree potential only
+   LELF         =      F    write electronic localiz. function (ELF)
+   LORBIT       =      0    0 simple, 1 ext, 2 COOP (PROOUT), +10 PAW based schemes
+
+
+ Dipole corrections
+   LMONO  =      F    monopole corrections only (constant potential shift)
+   LDIPOL =      F    correct potential (dipole corrections)
+   IDIPOL =      0    1-x, 2-y, 3-z, 4-all directions 
+   EPSILON=  1.0000000 bulk dielectric constant
+
+ Exchange correlation treatment:
+   GGA     =    --    GGA type
+   LEXCH   =     8    internal setting for exchange type
+   LIBXC   =     F    Libxc                    
+   VOSKOWN =     0    Vosko Wilk Nusair interpolation
+   LHFCALC =     F    Hartree Fock is set to
+   LHFONE  =     F    Hartree Fock one center treatment
+   AEXX    =    0.0000 exact exchange contribution
+
+ Linear response parameters
+   LEPSILON=     F    determine dielectric tensor
+   LRPA    =     F    only Hartree local field effects (RPA)
+   LNABLA  =     F    use nabla operator in PAW spheres
+   LVEL    =     F    velocity operator in full k-point grid
+   CSHIFT  =0.1000    complex shift for real part using Kramers Kronig
+   OMEGAMAX=  -1.0    maximum frequency
+   DEG_THRESHOLD= 0.2000000E-02 threshold for treating states as degnerate
+   RTIME   =   -0.100 relaxation time in fs
+  (WPLASMAI=    0.000 imaginary part of plasma frequency in eV, 0.658/RTIME)
+   DFIELD  = 0.0000000 0.0000000 0.0000000 field for delta impulse in time
+
+  Optional k-point grid parameters
+   LKPOINTS_OPT  =     F    use optional k-point grid
+   KPOINTS_OPT_MODE=     1    mode for optional k-point grid
+
+ Orbital magnetization related:
+   ORBITALMAG=     F  switch on orbital magnetization
+   LCHIMAG   =     F  perturbation theory with respect to B field
+   DQ        =  0.001000  dq finite difference perturbation B field
+   LLRAUG    =     F  two centre corrections for induced B field
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ Static calculation
+ charge density and potential will be updated during run
+ non-spin polarized calculation
+ Variant of blocked Davidson
+ Davidson routine will perform the subspace rotation
+ perform sub-space diagonalisation
+    after iterative eigenvector-optimisation
+ modified Broyden-mixing scheme, WC =      100.0
+ initial mixing is a Kerker type mixing with AMIX =  0.4000 and BMIX =      1.0000
+ Hartree-type preconditioning will be used
+ using additional bands           14
+ reciprocal scheme for non local part
+ calculate Harris-corrections to forces   (improved forces if not selfconsistent)
+ use gradient corrections 
+ use of overlap-Matrix (Vanderbilt PP)
+ Methfessel and Paxton  Order N= 1 SIGMA  =   0.00
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+  energy-cutoff  :      500.00
+  volume of cell :      125.00
+      direct lattice vectors                 reciprocal lattice vectors
+     5.000000000  0.000000000  0.000000000     0.200000000  0.000000000  0.000000000
+     0.000000000  5.000000000  0.000000000     0.000000000  0.200000000  0.000000000
+     0.000000000  0.000000000  5.000000000     0.000000000  0.000000000  0.200000000
+
+  length of vectors
+     5.000000000  5.000000000  5.000000000     0.200000000  0.200000000  0.200000000
+
+
+
+ old parameters found on file WAVECAR:
+  energy-cutoff  :      600.00
+  volume of cell :      125.00
+      direct lattice vectors                 reciprocal lattice vectors
+     5.000000000  0.000000000  0.000000000     0.200000000  0.000000000  0.000000000
+     0.000000000  5.000000000  0.000000000     0.000000000  0.200000000  0.000000000
+     0.000000000  0.000000000  5.000000000     0.000000000  0.000000000  0.200000000
+
+  length of vectors
+
+
+ k-points in units of 2pi/SCALE and weight: Automatically generated mesh            
+   0.00000000  0.00000000  0.00000000       1.000
+
+ k-points in reciprocal lattice and weights: Automatically generated mesh            
+   0.00000000  0.00000000  0.00000000       1.000
+
+ position of ions in fractional coordinates (direct lattice) 
+   0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.32000000
+
+ position of ions in cartesian coordinates  (Angst):
+   0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  1.60000000
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ use serial FFT for orbitals x direction half grid
+ k-point   1 :   0.0000 0.0000 0.0000  plane waves:    1596
+
+ maximum and minimum number of plane-waves per node :      1596     1596
+
+ maximum number of plane-waves:      1596
+ maximum index in each direction: 
+   IXMAX=    9   IYMAX=    9   IZMAX=    9
+   IXMIN=    0   IYMIN=   -9   IZMIN=   -9
+
+
+ serial   3D FFT for wavefunctions
+ parallel 3D FFT for charge:
+    minimum data exchange during FFTs selected (reduces bandwidth)
+
+
+ total amount of memory used by VASP MPI-rank0    67507. kBytes
+=======================================================================
+
+   base      :      30000. kBytes
+   nonl-proj :        791. kBytes
+   fftplans  :      13060. kBytes
+   grid      :      23203. kBytes
+   one-center:         40. kBytes
+   wavefun   :        413. kBytes
+
+     INWAV:  cpu time      0.0010: real time      0.0010
+ Broyden mixing: mesh for mixing (old mesh)
+   NGX = 19   NGY = 19   NGZ = 19
+  (NGX  = 72   NGY  = 72   NGZ  = 72)
+  gives a total of   6859 points
+
+ charge density for first step will be calculated from the start-wavefunctions
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ Maximum index for augmentation-charges         4385 (set IRDMAX)
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ initial charge from wavefunction
+ First call to EWALD:  gamma=   0.354
+ Maximum number of real-space cells 3x 3x 3
+ Maximum number of reciprocal cells 3x 3x 3
+
+    FEWALD:  cpu time      0.0003: real time      0.0003
+
+
+--------------------------------------- Iteration      1(   1)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1168: real time      0.1176
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0539: real time      0.0539
+       DOS:  cpu time      0.0001: real time      0.0001
+    CHARGE:  cpu time      0.0097: real time      0.0097
+    MIXING:  cpu time      0.0036: real time      0.0036
+    --------------------------------------------
+      LOOP:  cpu time      0.1873: real time      0.1880
+
+ eigenvalue-minimisations  :    32
+ total energy-change (2. order) :-0.2489351E+02  (-0.6681287E+02)
+ number of electron       4.0000024 magnetization 
+ augmentation part        1.1431991 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.44309E+01    rms(broyden)= 0.44267E+01
+  rms(prec ) = 0.54058E+01
+  weight for this iteration     100.00
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -21.35367070
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =         5.52820158
+  PAW double counting   =        99.79360086     -100.72033746
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -185.98267697
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =       -24.89351385 eV
+
+  energy without entropy =      -24.89351385  energy(sigma->0) =      -24.89351385
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   2)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1156: real time      0.1158
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0607: real time      0.0607
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0091: real time      0.0091
+    MIXING:  cpu time      0.0036: real time      0.0036
+    --------------------------------------------
+      LOOP:  cpu time      0.1923: real time      0.1926
+
+ eigenvalue-minimisations  :    40
+ total energy-change (2. order) : 0.9470417E+01  (-0.9083563E+01)
+ number of electron       4.0000020 magnetization 
+ augmentation part        0.9610899 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.48907E+01    rms(broyden)= 0.48906E+01
+  rms(prec ) = 0.53291E+01
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   0.6415
+  0.6415
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -36.25829404
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =         9.94520476
+  PAW double counting   =       112.35918613     -119.04607566
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -160.26448716
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =       -15.42309713 eV
+
+  energy without entropy =      -15.42309713  energy(sigma->0) =      -15.42309713
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   3)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1161: real time      0.1161
+    SETDIJ:  cpu time      0.0034: real time      0.0034
+     EDDAV:  cpu time      0.0609: real time      0.0609
+       DOS:  cpu time      0.0001: real time      0.0000
+    CHARGE:  cpu time      0.0092: real time      0.0092
+    MIXING:  cpu time      0.0037: real time      0.0037
+    --------------------------------------------
+      LOOP:  cpu time      0.1933: real time      0.1933
+
+ eigenvalue-minimisations  :    40
+ total energy-change (2. order) : 0.4043355E+01  (-0.2196958E+00)
+ number of electron       4.0000020 magnetization 
+ augmentation part        0.9336647 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.37788E+01    rms(broyden)= 0.37788E+01
+  rms(prec ) = 0.41141E+01
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.7372
+  1.1354  2.3391
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -43.67323213
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        10.94635470
+  PAW double counting   =       109.51083229     -118.70522374
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -147.29984171
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =       -11.37974175 eV
+
+  energy without entropy =      -11.37974175  energy(sigma->0) =      -11.37974175
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   4)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1150: real time      0.1150
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0684: real time      0.0684
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0091: real time      0.0091
+    MIXING:  cpu time      0.0038: real time      0.0038
+    --------------------------------------------
+      LOOP:  cpu time      0.1996: real time      0.1996
+
+ eigenvalue-minimisations  :    48
+ total energy-change (2. order) : 0.4688350E+01  (-0.1688184E+01)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8422386 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.38775E+00    rms(broyden)= 0.38759E+00
+  rms(prec ) = 0.70359E+00
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.1874
+  2.3269  1.1456  0.0896
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -73.46728793
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.75229515
+  PAW double counting   =        98.90649295     -116.43900789
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -108.28525326
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.69139215 eV
+
+  energy without entropy =       -6.69139215  energy(sigma->0) =       -6.69139215
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   5)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1154: real time      0.1154
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0704: real time      0.0704
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0093: real time      0.0093
+    MIXING:  cpu time      0.0038: real time      0.0038
+    --------------------------------------------
+      LOOP:  cpu time      0.2022: real time      0.2022
+
+ eigenvalue-minimisations  :    48
+ total energy-change (2. order) : 0.5539595E-01  (-0.9116928E-02)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8410098 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.38376E+00    rms(broyden)= 0.38375E+00
+  rms(prec ) = 0.64636E+00
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.4199
+  1.9151  1.9151  0.9246  0.9246
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -72.91062711
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.66720266
+  PAW double counting   =        97.86641319     -115.19434441
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -108.90600937
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.63599620 eV
+
+  energy without entropy =       -6.63599620  energy(sigma->0) =       -6.63599620
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   6)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1159: real time      0.1159
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0515: real time      0.0515
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0092: real time      0.0092
+    MIXING:  cpu time      0.0039: real time      0.0039
+    --------------------------------------------
+      LOOP:  cpu time      0.1838: real time      0.1838
+
+ eigenvalue-minimisations  :    32
+ total energy-change (2. order) : 0.8430635E-01  (-0.1940874E+00)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8593001 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.14302E+00    rms(broyden)= 0.14301E+00
+  rms(prec ) = 0.21702E+00
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.4520
+  2.7807  1.4192  1.4192  0.8205  0.8205
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -68.90349371
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        13.94541709
+  PAW double counting   =        85.21237960      -99.94606662
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -114.70129505
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.55168985 eV
+
+  energy without entropy =       -6.55168985  energy(sigma->0) =       -6.55168985
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   7)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1156: real time      0.1156
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0517: real time      0.0517
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0092: real time      0.0092
+    MIXING:  cpu time      0.0040: real time      0.0040
+    --------------------------------------------
+      LOOP:  cpu time      0.1838: real time      0.1838
+
+ eigenvalue-minimisations  :    32
+ total energy-change (2. order) : 0.2971418E-01  (-0.1649224E-01)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8508429 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.13086E+00    rms(broyden)= 0.13086E+00
+  rms(prec ) = 0.13730E+00
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.5103
+  2.4699  2.3731  1.4820  0.9028  0.9028  0.9311
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -71.86640821
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.29262071
+  PAW double counting   =        85.12633540     -100.70388444
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -111.21200795
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.52197567 eV
+
+  energy without entropy =       -6.52197567  energy(sigma->0) =       -6.52197567
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   8)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1159: real time      0.1159
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0613: real time      0.0613
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0093: real time      0.0093
+    MIXING:  cpu time      0.0042: real time      0.0042
+    --------------------------------------------
+      LOOP:  cpu time      0.1940: real time      0.1940
+
+ eigenvalue-minimisations  :    40
+ total energy-change (2. order) :-0.9302300E-02  (-0.1196803E-02)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8528276 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.30928E-01    rms(broyden)= 0.30928E-01
+  rms(prec ) = 0.70394E-01
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.6728
+  3.5328  2.5088  1.7027  1.3311  0.9706  0.8320  0.8320
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -71.26622371
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.19226338
+  PAW double counting   =        85.04926010     -100.45694374
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -111.89100282
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.53127797 eV
+
+  energy without entropy =       -6.53127797  energy(sigma->0) =       -6.53127797
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   9)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1163: real time      0.1164
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0687: real time      0.0687
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0091: real time      0.0091
+    MIXING:  cpu time      0.0042: real time      0.0042
+    --------------------------------------------
+      LOOP:  cpu time      0.2017: real time      0.2017
+
+ eigenvalue-minimisations  :    48
+ total energy-change (2. order) : 0.3417538E-03  (-0.9257957E-03)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8514958 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.10042E-01    rms(broyden)= 0.10042E-01
+  rms(prec ) = 0.20212E-01
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.6013
+  3.5653  2.5274  1.5573  1.5573  0.8446  0.8446  1.1074  0.8063
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -71.83998646
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.25066870
+  PAW double counting   =        85.28186098     -100.85448736
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -111.21036091
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.53093621 eV
+
+  energy without entropy =       -6.53093621  energy(sigma->0) =       -6.53093621
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  10)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1158: real time      0.1158
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0694: real time      0.0694
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0092: real time      0.0092
+    MIXING:  cpu time      0.0043: real time      0.0043
+    --------------------------------------------
+      LOOP:  cpu time      0.2020: real time      0.2020
+
+ eigenvalue-minimisations  :    48
+ total energy-change (2. order) :-0.1428341E-03  (-0.5065894E-04)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8516333 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.47980E-02    rms(broyden)= 0.47980E-02
+  rms(prec ) = 0.10778E-01
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.7871
+  4.3046  2.5754  2.2258  2.2258  1.2788  0.8519  0.8519  0.9200  0.8500
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -71.86263214
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.25238580
+  PAW double counting   =        85.21927892     -100.77184116
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -111.20963930
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.53107905 eV
+
+  energy without entropy =       -6.53107905  energy(sigma->0) =       -6.53107905
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  11)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1160: real time      0.1160
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0518: real time      0.0519
+       DOS:  cpu time      0.0000: real time      0.0000
+    CHARGE:  cpu time      0.0091: real time      0.0092
+    MIXING:  cpu time      0.0045: real time      0.0045
+    --------------------------------------------
+      LOOP:  cpu time      0.1847: real time      0.1848
+
+ eigenvalue-minimisations  :    32
+ total energy-change (2. order) :-0.1507619E-03  (-0.3473102E-04)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8517867 magnetization 
+
+ Broyden mixing:
+  rms(total) = 0.36403E-02    rms(broyden)= 0.36402E-02
+  rms(prec ) = 0.39370E-02
+  weight for this iteration     100.00
+
+ eigenvalues of (default mixing * dielectric matrix)
+  average eigenvalue GAMMA=   1.7885
+  4.4846  2.8036  2.4800  1.7700  1.7700  0.8493  0.8493  1.0202  1.0202  0.8376
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -71.88124321
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.25352291
+  PAW double counting   =        85.19428308     -100.73033858
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -111.20882284
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.53122981 eV
+
+  energy without entropy =       -6.53122981  energy(sigma->0) =       -6.53122981
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(  12)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.1156: real time      0.1156
+    SETDIJ:  cpu time      0.0033: real time      0.0033
+     EDDAV:  cpu time      0.0686: real time      0.0686
+       DOS:  cpu time      0.0000: real time      0.0000
+    --------------------------------------------
+      LOOP:  cpu time      0.1875: real time      0.1875
+
+ eigenvalue-minimisations  :    48
+ total energy-change (2. order) :-0.1645393E-04  (-0.7531062E-05)
+ number of electron       4.0000018 magnetization 
+ augmentation part        0.8517867 magnetization 
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =         0.61000179
+  Ewald energy   TEWEN  =       -36.22767305
+  -Hartree energ DENC   =       -71.90502244
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =        14.25689225
+  PAW double counting   =        85.30243742     -100.85771640
+  entropy T*S    EENTRO =         0.00000000
+  eigenvalues    EBANDS =      -111.16920593
+  atomic energy  EATOM  =       213.45904010
+  Solvation  Ediel_sol  =         0.00000000
+  ---------------------------------------------------
+  free energy    TOTEN  =        -6.53124626 eV
+
+  energy without entropy =       -6.53124626  energy(sigma->0) =       -6.53124626
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+ average (electrostatic) potential at core
+  the test charge radii are     0.7079  0.5883
+  (the norm of the test charge is              1.0000)
+       1 -46.4231       2 -35.5581
+
+
+
+ E-fermi :  -5.0753     XC(G=0):  -3.4030     alpha+bet : -1.9732
+
+ Fermi energy:        -5.0752529877
+
+ k-point     1 :       0.0000    0.0000    0.0000
+  band No.  band energies     occupation 
+      1     -50.4331      2.00000
+      2      -5.1515      2.00000
+      3      -1.0339      0.00000
+      4       1.8118      0.00000
+      5       1.8118      0.00000
+      6       2.5443      0.00000
+      7       3.5674      0.00000
+      8       3.5766      0.00000
+      9       6.5326      0.00000
+     10       7.6132      0.00000
+     11       7.6132      0.00000
+     12       8.5442      0.00000
+     13       8.5442      0.00000
+     14       8.6433      0.00000
+     15       8.9596      0.00000
+     16       9.4386      0.00000
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ soft charge-density along one line, spin component           1
+         0         1         2         3         4         5         6         7         8         9
+ total charge-density along one line
+
+ pseudopotential strength for first ion, spin component:           1
+-53.762 -55.002   4.410   0.000   0.002  -0.000  -0.000   0.008
+-55.002 -56.270   5.237   0.000   0.002  -0.000  -0.000   0.007
+  4.410   5.237  70.198   0.000   0.006  -0.000  -0.000  -0.113
+  0.000   0.000   0.000  -0.075   0.000   0.000   0.845   0.000
+  0.002   0.002   0.006   0.000  -0.076   0.000   0.000   0.847
+ -0.000  -0.000  -0.000   0.000   0.000  -0.075   0.000   0.000
+ -0.000  -0.000  -0.000   0.845   0.000   0.000 -50.445  -0.000
+  0.008   0.007  -0.113   0.000   0.847   0.000  -0.000 -50.462
+  0.000   0.000   0.000   0.000   0.000   0.845  -0.000  -0.000
+  0.000   0.000   0.000   0.062   0.000   0.000 -12.984  -0.000
+  0.103   0.104  -0.013   0.000   0.065   0.000  -0.000 -12.998
+ -0.000  -0.000  -0.000   0.000   0.000   0.062  -0.000  -0.000
+  0.000   0.000   0.000   0.000   0.000   0.000  -0.000  -0.000
+  0.000   0.000   0.000  -0.001   0.000   0.000   0.018   0.000
+ -0.003  -0.002   0.006   0.000  -0.001   0.000  -0.000   0.020
+  0.000   0.000   0.000   0.000   0.000  -0.001  -0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000  -0.000
+ -0.000  -0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.000
+ -0.000  -0.000  -0.000   0.002  -0.000  -0.000  -0.048  -0.000
+  0.004   0.003  -0.013  -0.000   0.002   0.000   0.000  -0.053
+ -0.000  -0.000  -0.000  -0.000  -0.000   0.002   0.000   0.000
+  0.000   0.000   0.000  -0.000  -0.000   0.000   0.000   0.000
+ -0.000  -0.000  -0.000  -0.000   0.000   0.000   0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000  -0.000
+ -0.000  -0.000  -0.000  -0.001  -0.000   0.000   0.003   0.000
+ -0.001  -0.001   0.001   0.000  -0.001   0.000  -0.000   0.003
+ -0.000  -0.000  -0.000   0.000   0.000  -0.001  -0.000  -0.000
+ -0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000  -0.000
+  0.000   0.000   0.000   0.000  -0.000   0.000  -0.000   0.000
+ total augmentation occupancy for first ion, spin component:           1
+ 18.084 -16.047  -0.048   0.000   3.135   0.000   0.000   0.033   0.000   0.000   0.012   0.000   0.000   0.000   0.158   0.000
+-16.047  16.015   0.048   0.000  -3.197  -0.000   0.000  -0.030  -0.000   0.000  -0.011   0.000   0.000  -0.000  -0.160   0.000
+ -0.048   0.048   0.000   0.000  -0.010   0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000
+  0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000   0.000   0.000  -0.000   0.000  -0.000
+  3.135  -3.197  -0.010   0.000   0.640  -0.000   0.000   0.006  -0.000   0.000   0.002   0.000   0.000   0.000   0.032   0.000
+  0.000  -0.000   0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000
+  0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000
+  0.033  -0.030  -0.000   0.000   0.006  -0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+  0.000  -0.000   0.000  -0.000  -0.000  -0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000
+  0.012  -0.011  -0.000   0.000   0.002  -0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000
+  0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000   0.000   0.000  -0.000   0.000   0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000
+  0.000  -0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000
+  0.158  -0.160  -0.000   0.000   0.032  -0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.002   0.000
+  0.000   0.000   0.000  -0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000   0.000
+ -0.000   0.000   0.000   0.000  -0.000  -0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000
+  0.000   0.000  -0.000   0.000   0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000   0.000   0.000  -0.000   0.000   0.000
+  0.022  -0.022  -0.000   0.000   0.004  -0.000   0.000   0.000  -0.000   0.000   0.000  -0.000   0.000   0.000   0.000  -0.000
+  0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000   0.000   0.000  -0.000   0.000   0.000   0.000  -0.000
+ -0.000   0.000   0.000   0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000  -0.000  -0.000   0.000  -0.000  -0.000   0.000
+ -0.000   0.000  -0.000  -0.000  -0.000   0.000   0.000   0.000   0.000   0.000  -0.000  -0.000   0.000   0.000   0.000  -0.000
+  0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000  -0.000   0.000   0.000
+  0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000   0.000  -0.000   0.000
+ -0.022   0.022   0.000   0.000  -0.004  -0.000   0.000  -0.000  -0.000   0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000
+ -0.000   0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000   0.000   0.000
+ -0.000   0.000   0.000   0.000  -0.000  -0.000  -0.000  -0.000   0.000   0.000  -0.000  -0.000   0.000   0.000  -0.000   0.000
+  0.000   0.000   0.000  -0.000   0.000   0.000   0.000   0.000  -0.000   0.000  -0.000  -0.000   0.000   0.000   0.000  -0.000
+
+
+------------------------ aborting loop because EDIFF is reached ----------------------------------------
+
+
+    CHARGE:  cpu time      0.0091: real time      0.0091
+    FORLOC:  cpu time      0.0084: real time      0.0084
+    FORNL :  cpu time      0.0100: real time      0.0100
+    STRESS:  cpu time      0.0439: real time      0.0439
+    FORHAR:  cpu time      0.0321: real time      0.0321
+    MIXING:  cpu time      0.0045: real time      0.0045
+    OFIELD:  cpu time      0.0000: real time      0.0000
+
+  FORCE on cell =-STRESS in cart. coord.  units (eV):
+  Direction    XX          YY          ZZ          XY          YZ          ZX
+  --------------------------------------------------------------------------------------
+  Alpha Z     0.61000     0.61000     0.61000
+  Ewald     -22.45845   -22.45845     8.68921    -0.00000     0.00000     0.00000
+  Hartree    17.30071    17.30071    37.27668    -0.00000    -0.00000    -0.00000
+  E(xc)     -15.84698   -15.84698   -15.70689    -0.00000    -0.00000    -0.00000
+  Local      -6.05515    -6.05515   -57.97957     0.00000    -0.00000     0.00000
+  n-local   -29.15117   -29.15117   -29.02111    -0.00000     0.00000    -0.00000
+  augment     6.76292     6.76292     6.80448     0.00000     0.00000     0.00000
+  Kinetic    47.58595    47.58595    48.14513    -0.00000    -0.00000     0.00000
+  Fock        0.00000     0.00000     0.00000     0.00000     0.00000     0.00000
+  -------------------------------------------------------------------------------------
+  Total      -1.25217    -1.25217    -1.18206     0.00000     0.00000     0.00000
+  in kB     -16.04957   -16.04957   -15.15101     0.00000     0.00000     0.00000
+  external pressure =      -15.75 kB  Pullay stress =        0.00 kB
+
+
+ VOLUME and BASIS-vectors are now :
+ -----------------------------------------------------------------------------
+  energy-cutoff  :      500.00
+  volume of cell :      125.00
+      direct lattice vectors                 reciprocal lattice vectors
+     5.000000000  0.000000000  0.000000000     0.200000000  0.000000000  0.000000000
+     0.000000000  5.000000000  0.000000000     0.000000000  0.200000000  0.000000000
+     0.000000000  0.000000000  5.000000000     0.000000000  0.000000000  0.200000000
+
+  length of vectors
+     5.000000000  5.000000000  5.000000000     0.200000000  0.200000000  0.200000000
+
+
+ FORCES acting on ions
+    electron-ion (+dipol)            ewald-force                    non-local-force                 convergence-correction
+ -----------------------------------------------------------------------------------------------
+   0.141E-15 -.139E-14 0.197E+02   -.265E-16 0.151E-16 -.138E+02   0.159E-21 0.106E-21 -.675E+01   0.588E-14 0.654E-14 0.713E-02
+   -.395E-15 -.816E-14 -.122E+02   0.753E-17 0.117E-16 0.138E+02   0.199E-22 0.000E+00 -.757E+00   0.441E-15 0.939E-15 -.463E-03
+ -----------------------------------------------------------------------------------------------
+   -.254E-15 -.955E-14 0.750E+01   -.190E-16 0.268E-16 0.000E+00   0.179E-21 0.106E-21 -.751E+01   0.633E-14 0.748E-14 0.666E-02
+
+
+ POSITION                                       TOTAL-FORCE (eV/Angst)
+ -----------------------------------------------------------------------------------
+      0.00000      0.00000      0.00000         0.000000      0.000000     -0.838643
+      0.00000      0.00000      1.60000        -0.000000     -0.000000      0.838643
+ -----------------------------------------------------------------------------------
+    total drift:                                0.000000     -0.000000     -0.000133
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+  FREE ENERGIE OF THE ION-ELECTRON SYSTEM (eV)
+  ---------------------------------------------------
+  free  energy   TOTEN  =        -6.53124626 eV
+
+  energy  without entropy=       -6.53124626  energy(sigma->0) =       -6.53124626
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+    POTLOK:  cpu time      0.1184: real time      0.1184
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ writing wavefunctions
+     LOOP+:  cpu time      2.7385: real time      2.8136
+    4ORBIT:  cpu time      0.0000: real time      0.0000
+
+ total amount of memory used by VASP MPI-rank0    67507. kBytes
+=======================================================================
+
+   base      :      30000. kBytes
+   nonl-proj :        791. kBytes
+   fftplans  :      13060. kBytes
+   grid      :      23203. kBytes
+   one-center:         40. kBytes
+   wavefun   :        413. kBytes
+
+  
+  
+ General timing and accounting informations for this job:
+ ========================================================
+  
+                  Total CPU time used (sec):        3.730
+                            User time (sec):        3.626
+                          System time (sec):        0.104
+                         Elapsed time (sec):        4.120
+  
+                   Maximum memory used (kb):       97912.
+                   Average memory used (kb):          N/A
+  
+                          Minor page faults:        73987
+                          Major page faults:            0
+                 Voluntary context switches:         1455
+ 
+ PROFILE, used timers:     202
+ =============================
+ 
+ index                 routine                    time                            calls level
+----------------------------------------------------------------------------------------------
+    1    total_time                            4.120627                                1   1
+    2      crpa_reader                           0.000018                              1   2
+    3      inisym                                0.003940                              1   2
+    4        posmap                                0.000004                            2   3
+    5      brgrid                                0.000373                              1   2
+    6      stufak                                0.002925                              1   2
+    7      spher                                 0.000757                              1   2
+    8      phase                                 0.000001                              1   2
+    9      setdij_                               0.002593                              2   2
+   10      vectorpot                             0.000000                              1   2
+   11      proall                                0.000472                              1   2
+   12        phase                                 0.000063                            1   3
+   13        proj                                  0.000408                            1   3
+   14          proj1                                 0.000401                         16   4
+   15            crexp_mul_wave                        0.000063                       32   5
+   16      orthch                                0.000190                              1   2
+   17        overl                                 0.000010                            1   3
+   18        orth1                                 0.000087                            1   3
+   19        choleski                              0.000013                            1   3
+   20        lincom                                0.000073                            1   3
+   21      redis_pw_over_bands                   0.000000                              1   2
+   22      set_charge                            0.011287                              1   2
+   23        soft_charge                           0.001692                            1   3
+   24          fftwav_mpi                            0.000625                          1   4
+   25            fftwav                                0.000625                        1   5
+   26              fft3d                                 0.000514                      1   6
+   27          pw_charge                             0.000055                          1   4
+   28          fft_gq                                0.000745                          1   4
+   29            fft3d_mpi                             0.000724                        1   5
+   30              fftbrc_mpi                            0.000520                      1   6
+   31                fftbas_plan_mpi                       0.000519                    1   7
+   32                  dfftw_execute                         0.000311                  3   8
+   33                  map_backward                          0.000156                  2   8
+   34                    map_gather                            0.000136                1   9
+   35        depsum                                0.000008                            1   3
+   36        augmentation_charge                   0.007697                            1   3
+   37          fft3d_mpi                             0.004590                          1   4
+   38            fftbrc_mpi                            0.004395                        1   5
+   39              fftbas_plan_mpi                       0.004395                      1   6
+   40                dfftw_execute                         0.002847                    3   7
+   41                map_backward                          0.001466                    2   7
+   42                  map_gather                            0.001231                  1   8
+   43      fewald                                0.000344                              1   2
+   44        rsp                                   0.000049                            1   3
+   45        rcp                                   0.000006                            1   3
+   46      elmin                                 2.314197                              1   2
+   47        potlok                                1.388489                           12   3
+   48          fft3d_mpi                             0.517017                        156   4
+   49            fftbrc_mpi                            0.487875                      156   5
+   50              fftbas_plan_mpi                       0.487833                    156   6
+   51                dfftw_execute                         0.375615                  468   7
+   52                map_forward                           0.058230                  168   7
+   53                  map_scatter                           0.038475                 84   8
+   54                map_backward                          0.044624                  144   7
+   55                  map_gather                            0.029891                 72   8
+   56          ggaall_grid                           0.434180                         12   4
+   57          pothar                                0.013760                         12   4
+   58        potlok_metagga                        0.000004                           12   3
+   59        vectorpot                             0.000003                           12   3
+   60        setdij_                               0.012999                           12   3
+   61        set_dd_magatom                        0.000001                           12   3
+   62        set_dd_paw                            0.026083                           12   3
+   63        eddav                                 0.737077                           12   3
+   64          phase                                 0.000001                         12   4
+   65          newband                               0.098627                         97   4
+   66            w1_copy                               0.000677                      384   5
+   67            fftwav_mpi                            0.083563                      192   5
+   68              fftwav                                0.083513                    192   6
+   69                fft3d                                 0.078247                  192   7
+   70            eccp                                  0.013087                      192   5
+   71            truncate_high_frequency_w1            0.000010                      192   5
+   72            setup_precond                         0.000945                      192   5
+   73          hamiltmu                              0.377143                         85   4
+   74            vhamil                                0.071499                      680   5
+   75            overl1                                0.000755                      680   5
+   76            vnlac0                                0.018102                      680   5
+   77              gemm                                  0.014834                   1360   6
+   78              work_mul_crexp                        0.002643                   1360   6
+   79            kinhamil                              0.284332                      680   5
+   80              fftext_mpi                            0.282570                    680   6
+   81                fft3d_mpi                             0.280478                  680   7
+   82                  fft3d                                 0.280271                680   8
+   83          overl                                 0.000811                       1168   4
+   84          truncate_high_frequency_w1            0.000046                        680   4
+   85          w1_copy                               0.002276                       1656   4
+   86          orth1                                 0.013497                        255   4
+   87          lapack                                0.007663                         85   4
+   88          apply_precond                         0.001059                        488   4
+   89          w1_projall                            0.011335                         61   4
+   90            proj1                                 0.011137                      488   5
+   91              crexp_mul_wave                        0.001687                    976   6
+   92          ggemm                                 0.006254                        109   4
+   93          fftwav_mpi                            0.209491                        488   4
+   94            fftwav                                0.209395                      488   5
+   95              fft3d                                 0.197272                    488   6
+   96          pdssyex_zheevx                        0.002072                         12   4
+   97            FERMAT_RAZOR                          0.000001                        1   5
+   98          lincom                                0.001139                         12   4
+   99        densta                                0.000051                           12   3
+  100        set_charge                            0.096687                           11   3
+  101          soft_charge                           0.017650                         11   4
+  102            fftwav_mpi                            0.009470                       22   5
+  103              fftwav                                0.009462                     22   6
+  104                fft3d                                 0.008992                   22   7
+  105            pw_charge                             0.001113                       22   5
+  106            fft_gq                                0.006241                       11   5
+  107              fft3d_mpi                             0.005998                     11   6
+  108                fftbrc_mpi                            0.004729                   11   7
+  109                  fftbas_plan_mpi                       0.004727                 11   8
+  110                    dfftw_execute                         0.003447               33   9
+  111                    map_backward                          0.000781               22   9
+  112                      map_gather                            0.000542             11  10
+  113          depsum                                0.000093                         11   4
+  114          augmentation_charge                   0.058487                         11   4
+  115            fft3d_mpi                             0.037459                       11   5
+  116              fftbrc_mpi                            0.035587                     11   6
+  117                fftbas_plan_mpi                       0.035586                   11   7
+  118                  dfftw_execute                         0.028052                 33   8
+  119                  map_backward                          0.006930                 22   8
+  120                    map_gather                            0.004593               11   9
+  121        brmix                                 0.043334                           11   3
+  122          brpre                                 0.000752                         11   4
+  123          setg0                                 0.022689                         12   4
+  124          broyd                                 0.005359                         11   4
+  125            brsav                                 0.000456                      112   5
+  126            brget                                 0.001517                      368   5
+  127      rotate_active_occupied_orbital        0.000000                              1   2
+  128      force_and_stress                      0.111523                              1   2
+  129        set_charge                            0.008778                            1   3
+  130          soft_charge                           0.001595                          1   4
+  131            fftwav_mpi                            0.000856                        2   5
+  132              fftwav                                0.000856                      2   6
+  133                fft3d                                 0.000813                    2   7
+  134            pw_charge                             0.000101                        2   5
+  135            fft_gq                                0.000569                        1   5
+  136              fft3d_mpi                             0.000548                      1   6
+  137                fftbrc_mpi                            0.000428                    1   7
+  138                  fftbas_plan_mpi                       0.000427                  1   8
+  139                    dfftw_execute                         0.000312                3   9
+  140                    map_backward                          0.000071                2   9
+  141                      map_gather                            0.000049              1  10
+  142          depsum                                0.000008                          1   4
+  143          augmentation_charge                   0.005286                          1   4
+  144            fft3d_mpi                             0.003391                        1   5
+  145              fftbrc_mpi                            0.003221                      1   6
+  146                fftbas_plan_mpi                       0.003221                    1   7
+  147                  dfftw_execute                         0.002547                  3   8
+  148                  map_backward                          0.000619                  2   8
+  149                    map_gather                            0.000414                1   9
+  150        forloc                                0.008408                            1   3
+  151        fornl                                 0.003895                            1   3
+  152          phase                                 0.000000                          1   4
+  153        fordep                                0.006088                            1   3
+  154          setdij_                               0.006080                          6   4
+  155        setdij_                               0.019976                           20   3
+  156        set_dd_magatom                        0.000000                            1   3
+  157        set_dd_paw                            0.002221                            1   3
+  158        strkin                                0.000148                            1   3
+  159        strelo                                0.010963                            1   3
+  160        strenl                                0.013849                            1   3
+  161          spher                                 0.010370                         19   4
+  162          phase                                 0.000001                          9   4
+  163          proj1                                 0.003276                        144   4
+  164            crexp_mul_wave                        0.000512                      288   5
+  165        chggra                                0.021434                            1   3
+  166          fft3d_mpi                             0.010234                          3   4
+  167            fftbrc_mpi                            0.009706                        3   5
+  168              fftbas_plan_mpi                       0.009706                      3   6
+  169                dfftw_execute                         0.007556                    9   7
+  170                map_forward                           0.001397                    4   7
+  171                  map_scatter                           0.000985                  2   8
+  172                map_backward                          0.000566                    2   7
+  173                  map_gather                            0.000390                  1   8
+  174          pothar                                0.001183                          1   4
+  175        forhar                                0.010655                            1   3
+  176        brmix                                 0.004521                            1   3
+  177          brpre                                 0.000068                          1   4
+  178          setg0                                 0.002024                          1   4
+  179          broyd                                 0.001114                          1   4
+  180            brget                                 0.000282                       64   5
+  181            brsav                                 0.000071                       16   5
+  182      potlok                                0.114896                              1   2
+  183        fft3d_mpi                             0.042391                           13   3
+  184          fftbrc_mpi                            0.040030                         13   4
+  185            fftbas_plan_mpi                       0.040026                       13   5
+  186              dfftw_execute                         0.031159                     39   6
+  187              map_forward                           0.004362                     14   6
+  188                map_scatter                           0.003079                    7   7
+  189              map_backward                          0.003757                     12   6
+  190                map_gather                            0.002537                    6   7
+  191        ggaall_grid                           0.036779                            1   3
+  192        pothar                                0.001146                            1   3
+  193      potlok_metagga                        0.000001                              1   2
+  194      set_dd_magatom                        0.000000                              1   2
+  195      set_dd_paw                            0.002216                              1   2
+  196      fft3d_mpi                             0.008470                              2   2
+  197        fftbrc_mpi                            0.008011                            2   3
+  198          fftbas_plan_mpi                       0.008011                          2   4
+  199            dfftw_execute                         0.006126                        6   5
+  200            map_forward                           0.001720                        4   5
+  201              map_scatter                           0.001223                      2   6
+  202      densta                                0.000010                              1   2
+ 
+ Flat profile
+ ============
+ 
+             routine name                   CPU           calls
+ ---------------------------------------------------------------
+ total_time                              1.546415           1
+ fft3d                                   0.566109        1385
+ ggaall_grid                             0.470959          13
+ potlok                                  0.458112          13
+ dfftw_execute                           0.457973         600
+ vhamil                                  0.071499         680
+ map_scatter                             0.043761          95
+ setdij_                                 0.041648          40
+ map_gather                              0.039783         105
+ fft3d_mpi                               0.036527         880
+ set_dd_paw                              0.030519          14
+ augmentation_charge                     0.026030          13
+ setg0                                   0.024713          13
+ set_charge                              0.024236          13
+ map_forward                             0.021947         190
+ map_backward                            0.019188         210
+ fftwav                                  0.018014         705
+ pothar                                  0.016089          14
+ brmix                                   0.015849          12
+ gemm                                    0.014834        1360
+ orth1                                   0.013584         256
+ eccp                                    0.013087         192
+ proj1                                   0.012553         648
+ fftbas_plan_mpi                         0.011799         200
+ spher                                   0.011127          20
+ strelo                                  0.010963           1
+ forhar                                  0.010655           1
+ chggra                                  0.010017           1
+ elmin                                   0.009470           1
+ forloc                                  0.008408           1
+ lapack                                  0.007663          85
+ ggemm                                   0.006254         109
+ eddav                                   0.005663          12
+ broyd                                   0.004147          12
+ inisym                                  0.003936           1
+ fornl                                   0.003895           1
+ w1_copy                                 0.002953        2040
+ stufak                                  0.002925           1
+ work_mul_crexp                          0.002643        1360
+ hamiltmu                                0.002455          85
+ crexp_mul_wave                          0.002262        1296
+ fftext_mpi                              0.002092         680
+ pdssyex_zheevx                          0.002071          12
+ brget                                   0.001799         432
+ kinhamil                                0.001762         680
+ pw_charge                               0.001269          25
+ lincom                                  0.001212          13
+ soft_charge                             0.001162          13
+ apply_precond                           0.001059         488
+ setup_precond                           0.000945         192
+ overl                                   0.000821        1169
+ brpre                                   0.000820          12
+ overl1                                  0.000755         680
+ vnlac0                                  0.000625         680
+ force_and_stress                        0.000587           1
+ brsav                                   0.000527         128
+ brgrid                                  0.000373           1
+ newband                                 0.000346          97
+ fewald                                  0.000289           1
+ fft_gq                                  0.000285          13
+ strenl                                  0.000201           1
+ w1_projall                              0.000198          61
+ fftwav_mpi                              0.000153         705
+ strkin                                  0.000148           1
+ depsum                                  0.000108          13
+ phase                                   0.000066          24
+ densta                                  0.000061          13
+ truncate_high_frequency_w1              0.000055         872
+ fftbrc_mpi                              0.000051         200
+ rsp                                     0.000049           1
+ crpa_reader                             0.000018           1
+ choleski                                0.000013           1
+ fordep                                  0.000008           1
+ orthch                                  0.000007           1
+ proj                                    0.000007           1
+ rcp                                     0.000006           1
+ potlok_metagga                          0.000005          13
+ posmap                                  0.000004           2
+ vectorpot                               0.000003          13
+ set_dd_magatom                          0.000001          14
+ FERMAT_RAZOR                            0.000001           1
+ proall                                  0.000001           1
+ rotate_active_occupied_orbital          0.000000           1
+ redis_pw_over_bands                     0.000000           1
+ ---------------------------------------------------------------
+  summed up times    4.1206269264221191     
+ 
+ Accumulative profile
+ ====================
+ 
+             routine name                   CPU           calls
+ ---------------------------------------------------------------
+ total_time                              4.120627           1
+ elmin                                   2.314197           1
+ potlok                                  1.503385          13
+ fft3d_mpi                               0.911299         880
+ eddav                                   0.737077          12
+ fftbrc_mpi                              0.594502         200
+ fftbas_plan_mpi                         0.594451         200
+ fft3d                                   0.566109        1385
+ ggaall_grid                             0.470959          13
+ dfftw_execute                           0.457973         600
+ hamiltmu                                0.377143          85
+ fftwav_mpi                              0.304005         705
+ fftwav                                  0.303852         705
+ kinhamil                                0.284332         680
+ fftext_mpi                              0.282570         680
+ set_charge                              0.116752          13
+ force_and_stress                        0.111523           1
+ newband                                 0.098627          97
+ vhamil                                  0.071499         680
+ augmentation_charge                     0.071470          13
+ map_forward                             0.065709         190
+ map_backward                            0.058970         210
+ brmix                                   0.047855          12
+ map_scatter                             0.043761          95
+ setdij_                                 0.041648          40
+ map_gather                              0.039783         105
+ set_dd_paw                              0.030519          14
+ setg0                                   0.024713          13
+ chggra                                  0.021434           1
+ soft_charge                             0.020937          13
+ vnlac0                                  0.018102         680
+ pothar                                  0.016089          14
+ gemm                                    0.014834        1360
+ proj1                                   0.014814         648
+ strenl                                  0.013849           1
+ orth1                                   0.013584         256
+ eccp                                    0.013087         192
+ w1_projall                              0.011335          61
+ spher                                   0.011127          20
+ strelo                                  0.010963           1
+ forhar                                  0.010655           1
+ forloc                                  0.008408           1
+ lapack                                  0.007663          85
+ fft_gq                                  0.007555          13
+ broyd                                   0.006473          12
+ ggemm                                   0.006254         109
+ fordep                                  0.006088           1
+ inisym                                  0.003940           1
+ fornl                                   0.003895           1
+ w1_copy                                 0.002953        2040
+ stufak                                  0.002925           1
+ work_mul_crexp                          0.002643        1360
+ crexp_mul_wave                          0.002262        1296
+ pdssyex_zheevx                          0.002072          12
+ brget                                   0.001799         432
+ pw_charge                               0.001269          25
+ lincom                                  0.001212          13
+ apply_precond                           0.001059         488
+ setup_precond                           0.000945         192
+ overl                                   0.000821        1169
+ brpre                                   0.000820          12
+ overl1                                  0.000755         680
+ brsav                                   0.000527         128
+ proall                                  0.000472           1
+ proj                                    0.000408           1
+ brgrid                                  0.000373           1
+ fewald                                  0.000344           1
+ orthch                                  0.000190           1
+ strkin                                  0.000148           1
+ depsum                                  0.000108          13
+ phase                                   0.000066          24
+ densta                                  0.000061          13
+ truncate_high_frequency_w1              0.000055         872
+ rsp                                     0.000049           1
+ crpa_reader                             0.000018           1
+ choleski                                0.000013           1
+ rcp                                     0.000006           1
+ potlok_metagga                          0.000005          13
+ posmap                                  0.000004           2
+ vectorpot                               0.000003          13
+ set_dd_magatom                          0.000001          14
+ FERMAT_RAZOR                            0.000001           1
+ rotate_active_occupied_orbital          0.000000           1
+ redis_pw_over_bands                     0.000000           1
+ ---------------------------------------------------------------
+ 
+Profiling took   0.003556  0.002676  0.001671  0.001631 seconds
+Profiling took   0.001523 seconds
