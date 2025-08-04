@@ -3,7 +3,9 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
+import re
+import os
+outpdf = re.sub("py", "pdf", os.path.basename(__file__))
 
 
 def ec(x,A0,A1,A2):
@@ -50,5 +52,5 @@ plt.xlabel("number of virtuals")
 plt.ylabel("Ec (Ha)")
 plt.legend()
 plt.tight_layout()
-plt.show()
+plt.savefig(re.sub("py", "pdf", os.path.basename(__file__)))
 

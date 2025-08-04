@@ -3,6 +3,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
+
+import re
+import os
+outpdf = re.sub("py", "pdf", os.path.basename(__file__))
+
 def linear(x, A, B):
     return A + B * x
 

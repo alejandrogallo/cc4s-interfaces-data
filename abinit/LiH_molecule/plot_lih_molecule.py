@@ -4,6 +4,10 @@ from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 import pandas as pd
 
+import re
+import os
+outpdf = re.sub("py", "pdf", os.path.basename(__file__))
+
 def linear(x, A0, A1):
     return A0 * x + A1
 
@@ -103,7 +107,8 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("lih_molecule_mp2.pdf")
 plt.savefig("lih_molecule_mp2.png")
-plt.show()
+if not "__file__" in locals():
+  plt.show()
 
 ax = plt.gca()
 plt.title("CCSD")
@@ -122,7 +127,8 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("lih_molecule_ccsd.pdf")
 plt.savefig("lih_molecule_ccsd.png")
-plt.show()
+if not "__file__" in locals():
+  plt.show()
 
 
 mp2_popt, _  = curve_fit(linear, inv_vol, mp2_extrap)
@@ -142,9 +148,9 @@ plt.xlabel("1 / V (bohr^-3)")
 plt.ylabel("Ec (mHa)")
 plt.legend()
 plt.tight_layout()
-plt.savefig("lih_molecule_vol_extrap.png")
-plt.savefig("lih_molecule_vol_extrap.pdf")
-plt.show()
+plt.savefig(outpdf)
+if not "__file__" in locals():
+  plt.show()
 
 
 
