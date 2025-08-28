@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from scipy.optimize import curve_fit
+import lib
 
 
 def linear(x, a, b):  # Replace with your function
@@ -25,8 +26,9 @@ plt.plot(1 / (df["nv"] + 0),
          df["correlation energy"],
          "+",
          label=r"$\alpha = 0$")
-plt.xlabel(r"$1/(N_\text{virtuals} + \alpha)$")
-plt.ylabel(r"$E^{\text{MP2}}_{\text{corr.}}$ [mHa]")
+plt.xlabel(r"$1/(N_\mathrm{virtuals} + \alpha)$")
+plt.ylabel(r"$E^{\mathrm{MP2}}_{\mathrm{corr.}}$ [mHa]")
 plt.xlim(0, 7e-3)
 plt.legend()
-plt.show()
+
+lib.maybe_plot(locals().get("__file__"))

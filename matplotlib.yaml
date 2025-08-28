@@ -8,7 +8,7 @@ font.serif: CMU Serif
 font.weight: normal
 
 text.color: black
-text.usetex: True
+text.usetex: true
 legend.fancybox: False
 savefig.bbox: tight
 
