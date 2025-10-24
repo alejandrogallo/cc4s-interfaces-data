@@ -6,7 +6,10 @@ abinit/He/abinit_he_atom_inv.py \
 abinit/He/abinit_he_atom.py \
 exciting/solid.py \
 exciting/he-vs-alpha.py \
-exciting/he-vs-rmt.py
+exciting/he-vs-rmt.py \
+vasp/He/vasp_he_atom.py \
+mrcc/molgw_he_atom.py \
+vasp/He/vasp_he_atom_alternative.py
 
 
 FIGS = $(patsubst %.py,%.pdf,$(figs_py)) main.pdf
